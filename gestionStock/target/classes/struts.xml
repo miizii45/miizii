@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+    <default-action-ref name="index"></default-action-ref>
+    	<action name="index">
+    		<result>views/index.jsp</result>
+    	</action>
+    	<action name="produits" class="org.sid.web.ProduitAction" method="index">
+    		<result name="success">views/Produits.jsp</result>
+    	</action>
+    	<action name="save" class="org.sid.web.ProduitAction" method="save">
+    		<result name="success">views/Produits.jsp</result>
+    	</action>
+    	<action name="delete" class="org.sid.web.ProduitAction" method="delete">
+    		<result name="success">views/Produits.jsp</result>
+    	</action>
+    	<action name="edit" class="org.sid.web.ProduitAction" method="edit">
+    		<result name="success">views/Produits.jsp</result>
+    	</action>
+    	
+    	<action name="aproduits" class="org.sid.web.ApprovisionnementA" method="indexa">
+    		<result name="success">views/Approvisionnements.jsp</result>
+    	</action>
+    	<action name="savea" class="org.sid.web.ApprovisionnementA" method="savea">
+    		<result name="success">views/Approvisionnements.jsp</result>
+    	</action>
+    	<action name="deletea" class="org.sid.web.ApprovisionnementA" method="deletea">
+    		<result name="success">views/Approvisionnements.jsp</result>
+    	</action>
+    	<action name="edita" class="org.sid.web.ApprovisionnementA" method="edita">
+    		<result name="success">views/Approvisionnements.jsp</result>
+    	</action>
+    	
+    	<action name="produitsp" class="org.sid.web.ProduitAction" method="pdf">
+    		<result name="success">views/test.jsp</result>
+    	</action>
+    	
+    	<action name="produitsa" class="org.sid.web.ProduitAction" method="pdfa">
+    		<result name="success">views/test1.jsp</result>
+    	</action>
+    	
+    	
+    	
+    </package>
+</struts>
